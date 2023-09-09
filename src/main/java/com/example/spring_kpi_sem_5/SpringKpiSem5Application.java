@@ -12,11 +12,4 @@ public class SpringKpiSem5Application {
         SpringApplication.run(SpringKpiSem5Application.class, args);
     }
 
-    @RestController
-    public class HelloWorldController {
-        @GetMapping("/hello")
-        public String helloWorld() {
-            return "Hello, World!";
-        }
-    }
 }
