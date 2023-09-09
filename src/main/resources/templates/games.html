@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Розклад ігор</title>
+</head>
+<body>
+<h2>Ігри</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Дата</th>
+        <th>Команда 1</th>
+        <th>Команда 2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="game : ${games}">
+        <td th:text="${game.id}"></td>
+        <td th:text="${game.date}"></td>
+        <td th:text="${game.team1.name}"></td>
+        <td th:text="${game.team2.name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
