@@ -3,11 +3,10 @@ package com.example.spring_kpi_sem_5.model;
 import java.util.Objects;
 
 public class Team {
-    private Long id; // Унікальний ідентифікатор
-    private String name; // Назва команди
+    private Long id;
+    private String name;
 
-    public Team() {
-    }
+    public Team() {}
 
     public Team(Long id, String name) {
         this.id = id;
@@ -35,8 +34,7 @@ public class Team {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Team team = (Team) o;
-        return Objects.equals(id, team.id) &&
-                Objects.equals(name, team.name);
+        return id.equals(team.id) && name.equals(team.name);
     }
 
     @Override

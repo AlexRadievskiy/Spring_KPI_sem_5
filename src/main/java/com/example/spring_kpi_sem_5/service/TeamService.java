@@ -8,9 +8,12 @@ import java.util.List;
 
 @Service
 public class TeamService {
+    private final TeamRepository teamRepository;
 
     @Autowired
-    private TeamRepository teamRepository;
+    public TeamService(TeamRepository teamRepository) {
+        this.teamRepository = teamRepository;
+    }
 
     public Team findById(Long id) {
         return teamRepository.findById(id);

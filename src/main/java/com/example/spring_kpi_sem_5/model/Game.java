@@ -9,6 +9,7 @@ public class Game {
     private Team team1; // Перша команда
     private Team team2; // Друга команда
 
+    // Конструкторы
     public Game() {
     }
 
@@ -19,6 +20,7 @@ public class Game {
         this.team2 = team2;
     }
 
+    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }
@@ -51,6 +53,7 @@ public class Game {
         this.team2 = team2;
     }
 
+    // equals, hashCode, toString
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

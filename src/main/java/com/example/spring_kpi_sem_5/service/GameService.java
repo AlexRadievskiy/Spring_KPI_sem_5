@@ -8,9 +8,12 @@ import java.util.List;
 
 @Service
 public class GameService {
+    private final GameRepository gameRepository;
 
     @Autowired
-    private GameRepository gameRepository;
+    public GameService(GameRepository gameRepository) {
+        this.gameRepository = gameRepository;
+    }
 
     public Game findById(Long id) {
         return gameRepository.findById(id);
